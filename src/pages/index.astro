@@ -1,0 +1,365 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout title="Packed — Fulfillment workspace for print shops">
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-md">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
+      <a href="/" class="flex items-center gap-2 font-bold tracking-tight">
+        <span class="inline-flex items-center justify-center rounded-md bg-primary p-1.5 text-primary-foreground">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+        </span>
+        Packed
+      </a>
+      <div class="hidden items-center gap-6 text-sm md:flex">
+        <a href="#features" class="text-muted-foreground transition-colors hover:text-foreground">Features</a>
+        <a href="#how-it-works" class="text-muted-foreground transition-colors hover:text-foreground">How it works</a>
+        <a href="#pricing" class="text-muted-foreground transition-colors hover:text-foreground">Pricing</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://app.packed.ink" class="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground md:inline-block">Log in</a>
+        <a href="https://app.packed.ink" class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">Get started</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto grid max-w-6xl gap-0 px-6 py-20 md:grid-cols-2 md:py-32">
+      <!-- Left — text -->
+      <div class="flex flex-col justify-center gap-6 md:pr-12">
+        <div class="inline-flex w-fit items-center gap-1.5 rounded-md border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          Free to start — no credit card required
+        </div>
+        <h1 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          The fulfillment workspace for print&nbsp;shops
+        </h1>
+        <p class="max-w-md text-lg text-muted-foreground">
+          Packed is the operational back-office between "we have an order" and "it's out the door." Pack orders, buy shipping labels, and notify customers — all in one place.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://app.packed.ink" class="inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+            Start packing — it's free
+          </a>
+          <a href="#how-it-works" class="inline-flex h-11 items-center rounded-md border px-6 text-sm font-medium transition-colors hover:bg-muted">
+            See how it works
+          </a>
+        </div>
+      </div>
+
+      <!-- Right — app preview mockup -->
+      <div class="relative mt-12 md:mt-0">
+        <div class="flex overflow-hidden rounded-lg border shadow-xl">
+          <!-- Sidebar mock -->
+          <div class="hidden w-48 flex-shrink-0 bg-sidebar p-4 text-sidebar-foreground sm:block">
+            <div class="mb-6 flex items-center gap-2">
+              <span class="inline-flex items-center justify-center rounded-md bg-sidebar-primary p-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+              </span>
+              <span class="text-sm font-bold tracking-tight">Packed</span>
+            </div>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 rounded-md bg-sidebar-accent px-2.5 py-1.5 text-xs font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                Dashboard
+              </div>
+              <div class="flex items-center gap-2 px-2.5 py-1.5 text-xs text-sidebar-foreground/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                Orders
+              </div>
+              <div class="flex items-center gap-2 px-2.5 py-1.5 text-xs text-sidebar-foreground/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                Settings
+              </div>
+            </div>
+          </div>
+          <!-- Content mock -->
+          <div class="flex-1 bg-card p-5">
+            <h3 class="mb-4 text-sm font-bold tracking-tight text-card-foreground">Dashboard</h3>
+            <div class="mb-4 grid grid-cols-3 gap-2">
+              <div class="rounded-md border p-3">
+                <p class="text-xs text-muted-foreground">Total orders</p>
+                <p class="text-lg font-bold tracking-tight">128</p>
+              </div>
+              <div class="rounded-md border p-3">
+                <p class="text-xs text-muted-foreground">Packing</p>
+                <p class="text-lg font-bold tracking-tight">5</p>
+              </div>
+              <div class="rounded-md border p-3">
+                <p class="text-xs text-muted-foreground">Shipped</p>
+                <p class="text-lg font-bold tracking-tight">112</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between rounded-md border px-3 py-2">
+                <div>
+                  <p class="text-xs font-medium">Order #1042</p>
+                  <p class="text-xs text-muted-foreground">Sarah M. — USPS Priority</p>
+                </div>
+                <span class="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-600">Shipped</span>
+              </div>
+              <div class="flex items-center justify-between rounded-md border px-3 py-2">
+                <div>
+                  <p class="text-xs font-medium">Order #1041</p>
+                  <p class="text-xs text-muted-foreground">James K. — Local pickup</p>
+                </div>
+                <span class="rounded-md bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-600">Packing</span>
+              </div>
+              <div class="flex items-center justify-between rounded-md border px-3 py-2">
+                <div>
+                  <p class="text-xs font-medium">Order #1040</p>
+                  <p class="text-xs text-muted-foreground">Devon R. — UPS Ground</p>
+                </div>
+                <span class="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-600">Shipped</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FEATURES ═══════════════ -->
+  <section id="features" class="border-t bg-muted/50 py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 max-w-2xl">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Everything between the order and the door</h2>
+        <p class="mt-3 text-muted-foreground">
+          One workspace to create orders, pack boxes, buy labels, and keep your customers in the loop.
+        </p>
+      </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature 1 -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Order management</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Create orders with customer details, shipping address, fulfillment method, and line items. Track every order from intake to delivery.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Packing workflow</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Add boxes with dimensions and weights, mark items as packed. Save package presets for your most-used box sizes with one-click selection.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M2 8h20"/><path d="M6 12h.01"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Multi-carrier shipping labels</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Get live rates from USPS, UPS, FedEx, and more via Shippo. Choose a rate, purchase the label, and download the PDF — all within the order.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Customer notifications</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Send branded "shipped" or "ready for pickup" emails directly to customers with tracking info and your shop's display name.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">White-label branding</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Customize your shop name, logo, email templates, and packing documents. Remove the Packed watermark so everything looks like yours.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Dashboard overview</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            See your total orders, pending items, packing queue, and recent shipments at a glance. Status badges keep everything visible.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+  <section id="how-it-works" class="border-t py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 max-w-2xl">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Four steps. Order to doorstep.</h2>
+        <p class="mt-3 text-muted-foreground">
+          A streamlined packing workflow designed for production teams that ship physical goods.
+        </p>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="relative">
+          <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">1</div>
+          <h3 class="font-bold tracking-tight">Create the order</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Enter the customer name, email, shipping address, and fulfillment method — ship or local pickup.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">2</div>
+          <h3 class="font-bold tracking-tight">Pack the boxes</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Add packages with dimensions and weights. Use saved presets or enter custom sizes. Mark items as packed.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">3</div>
+          <h3 class="font-bold tracking-tight">Buy a label</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Compare live rates from USPS, UPS, FedEx, and more. Choose a rate, purchase, and download the PDF label.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">4</div>
+          <h3 class="font-bold tracking-tight">Notify the customer</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Send a branded shipment or pickup-ready email with tracking info — directly from Packed.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ PRICING ═══════════════ -->
+  <section id="pricing" class="border-t bg-muted/50 py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Simple pricing. Start free.</h2>
+        <p class="mt-3 text-muted-foreground">
+          Shipping labels work out of the box on the free plan. Upgrade when you need volume and customer-facing features.
+        </p>
+      </div>
+
+      <div class="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
+        <!-- Free tier -->
+        <div class="rounded-md border bg-card p-6">
+          <h3 class="font-bold tracking-tight">Free</h3>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-3xl font-bold tracking-tight">$0</span>
+            <span class="text-sm text-muted-foreground">/month</span>
+          </div>
+          <p class="mt-2 text-sm text-muted-foreground">Get started with core fulfillment tools.</p>
+          <a href="https://app.packed.ink" class="mt-6 flex h-10 w-full items-center justify-center rounded-md border text-sm font-medium transition-colors hover:bg-muted">
+            Get started
+          </a>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Manual orders &amp; packing
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Shipping label purchasing
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Up to 10 labels per month
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Dashboard &amp; order tracking
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pro tier -->
+        <div class="relative rounded-md border-2 border-accent bg-card p-6">
+          <span class="absolute -top-3 right-4 rounded-md bg-accent px-2.5 py-0.5 text-xs font-medium text-accent-foreground">Pro</span>
+          <h3 class="font-bold tracking-tight">Pro</h3>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-3xl font-bold tracking-tight">$9</span>
+            <span class="text-sm text-muted-foreground">/month</span>
+          </div>
+          <p class="mt-2 text-sm text-muted-foreground">For shops that ship at volume and care about customer experience.</p>
+          <a href="https://app.packed.ink" class="mt-6 flex h-10 w-full items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+            Upgrade to Pro
+          </a>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Everything in Free
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              <strong>Unlimited</strong> shipping labels
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Package presets
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Customer email notifications
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Custom branding on PDFs
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Remove Packed watermark
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA ═══════════════ -->
+  <section class="border-t py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Ready to streamline your fulfillment?</h2>
+      <p class="mx-auto mt-3 max-w-lg text-muted-foreground">
+        Create your workspace in under a minute. No credit card required — shipping labels work on the free plan.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a href="https://app.packed.ink" class="inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+          Start packing — it's free
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="border-t bg-muted/30 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center justify-center rounded-md bg-primary p-1 text-primary-foreground">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+        </span>
+        <span>&copy; {new Date().getFullYear()} Packed. All rights reserved.</span>
+      </div>
+      <div class="flex gap-6">
+        <a href="https://app.packed.ink" class="transition-colors hover:text-foreground">Log in</a>
+        <a href="https://app.packed.ink" class="transition-colors hover:text-foreground">Sign up</a>
+      </div>
+    </div>
+  </footer>
+
+</Layout>
