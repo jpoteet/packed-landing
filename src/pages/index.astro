@@ -39,7 +39,7 @@ import "../styles/global.css";
           The fulfillment workspace for print&nbsp;shops
         </h1>
         <p class="max-w-md text-lg text-muted-foreground">
-          Packed is the operational back-office between "we have an order" and "it's out the door." Pack orders, buy shipping labels, and notify customers — all in one place.
+          Pack orders, buy discounted shipping labels, print packing slips, and notify customers — whether you ship, deliver locally, or hand off at the counter.
         </p>
         <div class="flex flex-wrap gap-3">
           <a href="https://app.packed.ink" class="inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
@@ -129,74 +129,118 @@ import "../styles/global.css";
       <div class="mb-12 max-w-2xl">
         <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Everything between the order and the door</h2>
         <p class="mt-3 text-muted-foreground">
-          One workspace to create orders, pack boxes, buy labels, and keep your customers in the loop.
+          Ship, deliver locally, or prep for pickup — Packed gives your team one workspace to manage it all.
         </p>
       </div>
 
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <!-- Feature 1 -->
+        <!-- Feature 1 — Orders & Fulfillment -->
         <div class="rounded-md border bg-card p-6">
           <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
           </div>
-          <h3 class="font-bold tracking-tight">Order management</h3>
+          <h3 class="font-bold tracking-tight">Orders &amp; fulfillment</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Create orders with customer details, shipping address, fulfillment method, and line items. Track every order from intake to delivery.
+            Create orders with line items, assign customers, and choose a fulfillment method — shipping, local delivery, or in-store pickup. Filter, search, and track status from Pending to Shipped.
           </p>
         </div>
 
-        <!-- Feature 2 -->
+        <!-- Feature 2 — Drag-and-Drop Packing -->
         <div class="rounded-md border bg-card p-6">
           <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
           </div>
-          <h3 class="font-bold tracking-tight">Packing workflow</h3>
+          <h3 class="font-bold tracking-tight">Drag-and-drop packing</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Add boxes with dimensions and weights, mark items as packed. Save package presets for your most-used box sizes with one-click selection.
+            Drag items from the order directly into boxes. Each box tracks its contents and weight. Apply saved package presets in one click for your most-used box sizes.
           </p>
         </div>
 
-        <!-- Feature 3 -->
+        <!-- Feature 3 — Multi-Carrier Shipping -->
         <div class="rounded-md border bg-card p-6">
           <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="M2 8h20"/><path d="M6 12h.01"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
           </div>
           <h3 class="font-bold tracking-tight">Multi-carrier shipping labels</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Get live rates from USPS, UPS, FedEx, and more via Shippo. Choose a rate, purchase the label, and download the PDF — all within the order.
+            Get live rates from USPS, UPS, and FedEx. Purchase per-box labels or buy all labels at once in bulk. Enter manual tracking for off-platform shipments too.
           </p>
         </div>
 
-        <!-- Feature 4 -->
+        <!-- Feature 4 — Live Tracking -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Live tracking</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Every shipment gets an expandable tracking timeline. Pull the latest carrier updates with one click and see exactly where each package is.
+          </p>
+        </div>
+
+        <!-- Feature 5 — Customer Directory -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Customer directory</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Keep a searchable directory of customers with contact info, shipping addresses, and full order history. Assign returning customers to new orders instantly.
+          </p>
+        </div>
+
+        <!-- Feature 6 — Customer Notifications -->
         <div class="rounded-md border bg-card p-6">
           <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           </div>
           <h3 class="font-bold tracking-tight">Customer notifications</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Send branded "shipped" or "ready for pickup" emails directly to customers with tracking info and your shop's display name.
+            Send branded shipment confirmation or pickup-ready emails with tracking info. Customize the sender name and footer to match your shop.
           </p>
         </div>
 
-        <!-- Feature 5 -->
+        <!-- Feature 7 — Document Template Editor -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M2 15s2-2 4-2 4 2 4 2"/><path d="M2 19s2-2 4-2 4 2 4 2"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Document template editor</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Design packing slips and box labels with a drag-and-drop block editor. Choose 1- or 2-column layouts, add logos and QR codes, and preview against real orders. Letter and thermal 4×6 formats.
+          </p>
+        </div>
+
+        <!-- Feature 8 — Printing -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Packing slips &amp; labels</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Print packing slips, box labels, and pickup labels in one click. Multiple templates per type with a default — choose from a dropdown right on the order page.
+          </p>
+        </div>
+
+        <!-- Feature 9 — White-Label Branding -->
         <div class="rounded-md border bg-card p-6">
           <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
           </div>
           <h3 class="font-bold tracking-tight">White-label branding</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Customize your shop name, logo, email templates, and packing documents. Remove the Packed watermark so everything looks like yours.
+            Upload your logo, set your shop name and reply-to email, and customize every customer-facing document. Remove the Packed watermark so everything looks like yours.
           </p>
         </div>
 
-        <!-- Feature 6 -->
+        <!-- Feature 10 — API & Webhooks -->
         <div class="rounded-md border bg-card p-6">
           <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
           </div>
-          <h3 class="font-bold tracking-tight">Dashboard overview</h3>
+          <h3 class="font-bold tracking-tight">API &amp; webhooks</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            See your total orders, pending items, packing queue, and recent shipments at a glance. Status badges keep everything visible.
+            Connect Packed to Shopify, Etsy, or your own ERP with a full REST API. Register webhook endpoints for order and shipment events with HMAC-signed payloads.
           </p>
         </div>
       </div>
@@ -209,7 +253,7 @@ import "../styles/global.css";
       <div class="mb-12 max-w-2xl">
         <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Four steps. Order to doorstep.</h2>
         <p class="mt-3 text-muted-foreground">
-          A streamlined packing workflow designed for production teams that ship physical goods.
+          Whether you ship, deliver locally, or hand off at the counter — the workflow is the same.
         </p>
       </div>
 
@@ -218,28 +262,28 @@ import "../styles/global.css";
           <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">1</div>
           <h3 class="font-bold tracking-tight">Create the order</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Enter the customer name, email, shipping address, and fulfillment method — ship or local pickup.
+            Add line items, assign a customer, and choose a fulfillment method — shipping, local delivery, or in-store pickup.
           </p>
         </div>
         <div class="relative">
           <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">2</div>
-          <h3 class="font-bold tracking-tight">Pack the boxes</h3>
+          <h3 class="font-bold tracking-tight">Drag items into boxes</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Add packages with dimensions and weights. Use saved presets or enter custom sizes. Mark items as packed.
+            Drag-and-drop items from the order into boxes. Apply package presets or enter custom dimensions. Each box tracks contents and weight.
           </p>
         </div>
         <div class="relative">
           <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">3</div>
-          <h3 class="font-bold tracking-tight">Buy a label</h3>
+          <h3 class="font-bold tracking-tight">Ship or mark ready</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Compare live rates from USPS, UPS, FedEx, and more. Choose a rate, purchase, and download the PDF label.
+            Buy discounted labels from USPS, UPS, or FedEx — per box or all at once. For pickup orders, mark them ready with one click.
           </p>
         </div>
         <div class="relative">
           <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">4</div>
-          <h3 class="font-bold tracking-tight">Notify the customer</h3>
+          <h3 class="font-bold tracking-tight">Notify &amp; track</h3>
           <p class="mt-1 text-sm text-muted-foreground">
-            Send a branded shipment or pickup-ready email with tracking info — directly from Packed.
+            Send a branded tracking email or pickup notification. Follow every package with live carrier updates and an event timeline.
           </p>
         </div>
       </div>
@@ -264,26 +308,30 @@ import "../styles/global.css";
             <span class="text-3xl font-bold tracking-tight">$0</span>
             <span class="text-sm text-muted-foreground">/month</span>
           </div>
-          <p class="mt-2 text-sm text-muted-foreground">Get started with core fulfillment tools.</p>
+          <p class="mt-2 text-sm text-muted-foreground">Core fulfillment tools to get started.</p>
           <a href="https://app.packed.ink" class="mt-6 flex h-10 w-full items-center justify-center rounded-md border text-sm font-medium transition-colors hover:bg-muted">
             Get started
           </a>
           <ul class="mt-6 space-y-3 text-sm">
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
-              Manual orders &amp; packing
+              Manual orders &amp; drag-and-drop packing
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
-              Shipping label purchasing
+              Box label printing
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
-              Up to 10 labels per month
+              Shipping label purchasing (USPS, UPS, FedEx)
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
-              Dashboard &amp; order tracking
+              Up to 10 shipments per month
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Dashboard, customer directory &amp; live tracking
             </li>
           </ul>
         </div>
@@ -307,7 +355,7 @@ import "../styles/global.css";
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
-              <strong>Unlimited</strong> shipping labels
+              <strong>Unlimited</strong> shipments
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
@@ -319,11 +367,23 @@ import "../styles/global.css";
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
-              Custom branding on PDFs
+              Packing slips &amp; pickup labels
             </li>
             <li class="flex items-start gap-2">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
-              Remove Packed watermark
+              Document template editor
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              REST API &amp; webhooks
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Remove Packed branding
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Billing portal (invoices, card management)
             </li>
           </ul>
         </div>
@@ -331,8 +391,61 @@ import "../styles/global.css";
     </div>
   </section>
 
-  <!-- ═══════════════ CTA ═══════════════ -->
+  <!-- ═══════════════ INTEGRATIONS ═══════════════ -->
   <section class="border-t py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mx-auto grid max-w-4xl items-center gap-12 md:grid-cols-2">
+        <div>
+          <div class="mb-4 inline-flex items-center gap-1.5 rounded-md border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+            Pro
+          </div>
+          <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Connect to anything</h2>
+          <p class="mt-3 text-muted-foreground">
+            Sync Packed with Shopify, Etsy, or your own ERP. Generate a REST API key, register webhook endpoints for order and shipment events, and automate your entire fulfillment pipeline.
+          </p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-accent"><path d="M20 6 9 17l-5-5"/></svg>
+              Full REST API with Bearer token auth
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-accent"><path d="M20 6 9 17l-5-5"/></svg>
+              Webhooks for order &amp; box lifecycle events
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-accent"><path d="M20 6 9 17l-5-5"/></svg>
+              Per-webhook HMAC signing secrets
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-accent"><path d="M20 6 9 17l-5-5"/></svg>
+              Manage multiple webhook endpoints
+            </li>
+          </ul>
+        </div>
+        <!-- Code snippet mockup -->
+        <div class="rounded-lg border bg-sidebar p-5 font-mono text-xs leading-relaxed text-sidebar-foreground">
+          <div class="mb-3 flex items-center gap-1.5">
+            <span class="h-2.5 w-2.5 rounded-full bg-red-500/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-green-500/60"></span>
+          </div>
+          <pre class="overflow-x-auto"><code><span class="text-emerald-400">POST</span> /api/webhooks
+<span class="text-sidebar-foreground/50">{</span>
+  <span class="text-sky-400">"url"</span>: <span class="text-amber-300">"https://your-app.com/hook"</span>,
+  <span class="text-sky-400">"events"</span>: [
+    <span class="text-amber-300">"order.shipped"</span>,
+    <span class="text-amber-300">"box.packed"</span>
+  ]
+<span class="text-sidebar-foreground/50">}</span>
+
+<span class="text-sidebar-foreground/50">→</span> <span class="text-emerald-400">201</span> Created</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA ═══════════════ -->
+  <section class="border-t bg-muted/50 py-20 md:py-28">
     <div class="mx-auto max-w-6xl px-6 text-center">
       <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Ready to streamline your fulfillment?</h2>
       <p class="mx-auto mt-3 max-w-lg text-muted-foreground">
