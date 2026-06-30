@@ -4,7 +4,7 @@ interface Props {
   description?: string;
 }
 
-const { title, description = "White-label fulfillment and shipping workspace for print shops and small production teams." } = Astro.props;
+const { title, description = "Music lessons, camps, and school programs that help kids find their rhythm." } = Astro.props;
 ---
 
 <!doctype html>
@@ -16,17 +16,11 @@ const { title, description = "White-label fulfillment and shipping workspace for
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-
-    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-sans/style.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/geist@1.3.0/dist/fonts/geist-mono/style.css" rel="stylesheet" />
-
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://packed.ink" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet" />
   </head>
-  <body class="min-h-screen bg-background text-foreground font-sans antialiased">
+  <body class="min-h-screen bg-[#f5f4f0] text-[#1a1a1a] antialiased">
     <slot />
   </body>
 </html>

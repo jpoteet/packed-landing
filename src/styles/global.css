@@ -1,40 +1,31 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
 
-  --radius: 0.3rem;
-  --radius-md: 0.3rem;
-  --radius-lg: 0.4rem;
-  --radius-xl: 0.5rem;
+  --color-charcoal: #1a1a1a;
+  --color-charcoal-light: #2d2d2d;
+  --color-offwhite: #f5f4f0;
+  --color-red: #e02020;
+  --color-red-dark: #b51a1a;
+  --color-gold: #e8a020;
+  --color-gold-light: #f5c842;
+  --color-blue: #4a6fa5;
+  --color-blue-light: #6b8fc4;
 
-  --color-background: hsl(0 0% 98%);
-  --color-foreground: hsl(240 10% 10%);
-  --color-primary: hsl(240 10% 10%);
-  --color-primary-foreground: hsl(0 0% 98%);
-  --color-accent: hsl(220 90% 50%);
-  --color-accent-foreground: hsl(0 0% 100%);
-  --color-muted: hsl(240 5% 94%);
-  --color-muted-foreground: hsl(240 5% 45%);
-  --color-border: hsl(240 5% 84%);
-  --color-destructive: hsl(0 84% 60%);
-  --color-card: hsl(0 0% 100%);
-  --color-card-foreground: hsl(240 10% 10%);
-
-  --color-sidebar: hsl(240 10% 10%);
-  --color-sidebar-foreground: hsl(0 0% 98%);
-  --color-sidebar-accent: hsl(240 5% 20%);
-  --color-sidebar-primary: hsl(220 90% 50%);
+  --color-background: #f5f4f0;
+  --color-foreground: #1a1a1a;
+  --color-primary: #e02020;
+  --color-primary-foreground: #ffffff;
+  --color-card: #ffffff;
+  --color-border: #e0ddd6;
+  --color-muted: #6b6660;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
-  }
-
-  * {
-    border-color: var(--color-border);
   }
 
   body {
@@ -43,5 +34,15 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 }
