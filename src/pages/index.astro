@@ -1,360 +1,120 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 ---
 
-<Layout title="Cleveland Rocks Music Academy" description="Music lessons, camps, and school programs that help kids find their rhythm.">
+<Layout title="Packed — Fulfillment workspace for print shops">
 
-  <!-- NAV -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: rgba(26,26,26,0.97); backdrop-filter: blur(12px);">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-      <a href="#hero" class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-[#e02020] rounded flex items-center justify-center">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M9 18V5l12-2v13M9 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm12-2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"/></svg>
-        </div>
-        <span class="text-white font-bold text-lg tracking-tight">Cleveland <span class="text-[#e02020]">Rocks</span></span>
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <nav class="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-md">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
+      <a href="/" class="flex items-center gap-2 font-bold tracking-tight">
+        <span class="inline-flex items-center justify-center rounded-md bg-primary p-1.5 text-primary-foreground">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+        </span>
+        Packed
       </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#programs" class="text-white/60 hover:text-white text-sm font-medium transition-colors">Programs</a>
-        <a href="#camps" class="text-white/60 hover:text-white text-sm font-medium transition-colors">Camps</a>
-        <a href="#schools" class="text-white/60 hover:text-white text-sm font-medium transition-colors">Schools</a>
-        <a href="#contact" class="text-white/60 hover:text-white text-sm font-medium transition-colors">Contact</a>
-        <button id="nav-book-btn" class="bg-[#e02020] hover:bg-[#b51a1a] text-white text-sm font-bold px-5 py-2 rounded-full transition-all duration-200 hover:scale-105">Book Free Intro</button>
+      <div class="hidden items-center gap-6 text-sm md:flex">
+        <a href="#features" class="text-muted-foreground transition-colors hover:text-foreground">Features</a>
+        <a href="#how-it-works" class="text-muted-foreground transition-colors hover:text-foreground">How it works</a>
+        <a href="#pricing" class="text-muted-foreground transition-colors hover:text-foreground">Pricing</a>
       </div>
-      <button id="mobile-menu-btn" class="md:hidden text-white p-2">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-[#111] border-t border-white/10 px-4 pb-4">
-      <div class="flex flex-col gap-2 pt-3">
-        <a href="#programs" class="mobile-nav-link text-white/70 py-2 text-sm font-medium">Programs</a>
-        <a href="#camps" class="mobile-nav-link text-white/70 py-2 text-sm font-medium">Camps</a>
-        <a href="#schools" class="mobile-nav-link text-white/70 py-2 text-sm font-medium">Schools</a>
-        <a href="#contact" class="mobile-nav-link text-white/70 py-2 text-sm font-medium">Contact</a>
-        <button class="mobile-book-btn bg-[#e02020] text-white text-sm font-bold px-4 py-3 rounded-full w-full mt-2">Book Free Intro</button>
+      <div class="flex items-center gap-3">
+        <a href="https://app.packed.ink" class="hidden text-sm font-medium text-muted-foreground transition-colors hover:text-foreground md:inline-block">Log in</a>
+        <a href="https://app.packed.ink" class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">Get started</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="hero" class="relative min-h-screen flex items-center overflow-hidden bg-[#111]">
-    <div class="absolute inset-0" style="background: radial-gradient(ellipse at 15% 50%, rgba(224,32,32,0.15) 0%, transparent 55%), radial-gradient(ellipse at 85% 20%, rgba(232,160,32,0.1) 0%, transparent 45%), radial-gradient(ellipse at 60% 80%, rgba(74,111,165,0.1) 0%, transparent 40%);"></div>
-    <div class="absolute inset-0 opacity-[0.04]" style="background-image: linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px); background-size: 64px 64px;"></div>
-
-    <div class="relative max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-16 w-full">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div class="text-center lg:text-left">
-          <div class="inline-flex items-center gap-2 bg-[#e02020]/15 border border-[#e02020]/25 rounded-full px-4 py-1.5 mb-6">
-            <div class="w-2 h-2 bg-[#e02020] rounded-full animate-pulse"></div>
-            <span class="text-[#e02020] text-xs font-bold tracking-wider uppercase">Now Enrolling · Summer 2025</span>
-          </div>
-          <h1 class="text-white font-black leading-none mb-5" style="font-size: clamp(3rem, 7.5vw, 5.8rem); font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.025em; line-height: 0.95;">
-            CLEVELAND<br/>
-            <span class="text-[#e02020]">ROCKS</span><br/>
-            <span style="font-size: 0.68em; color: rgba(245,244,240,0.9);">MUSIC ACADEMY</span>
-          </h1>
-          <p class="text-white/65 text-lg sm:text-xl leading-relaxed mb-8 max-w-lg mx-auto lg:mx-0">
-            Private lessons, music camps, and school-based programs for young musicians across Greater Cleveland.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-            <a href="#programs" class="bg-[#e02020] hover:bg-[#b51a1a] text-white font-bold px-8 py-4 rounded-full text-base transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-[#e02020]/30 text-center">View Programs</a>
-            <button id="hero-book-btn" class="bg-white/8 hover:bg-white/15 border border-white/15 text-white font-bold px-8 py-4 rounded-full text-base transition-all duration-200 hover:scale-105 text-center">Book a Free Intro</button>
-          </div>
-          <div class="flex gap-8 justify-center lg:justify-start mt-10 pt-8 border-t border-white/10">
-            <div><div class="text-white font-black text-3xl" style="font-family:'Bebas Neue',sans-serif;">200+</div><div class="text-white/40 text-xs tracking-wider">Students</div></div>
-            <div><div class="text-white font-black text-3xl" style="font-family:'Bebas Neue',sans-serif;">15+</div><div class="text-white/40 text-xs tracking-wider">Instruments</div></div>
-            <div><div class="text-white font-black text-3xl" style="font-family:'Bebas Neue',sans-serif;">30+</div><div class="text-white/40 text-xs tracking-wider">Schools Served</div></div>
-          </div>
+  <!-- ═══════════════ HERO ═══════════════ -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto grid max-w-6xl gap-0 px-6 py-20 md:grid-cols-2 md:py-32">
+      <!-- Left — text -->
+      <div class="flex flex-col justify-center gap-6 md:pr-12">
+        <div class="inline-flex w-fit items-center gap-1.5 rounded-md border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          Free to start — no credit card required
         </div>
-
-        <!-- Hero visual: instrument cards -->
-        <div class="hidden lg:flex items-center justify-center relative">
-          <div class="relative w-[460px] h-[460px]">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-56 h-56 bg-[#e02020]/15 rounded-full blur-3xl pointer-events-none"></div>
-
-            <div class="instrument-card absolute top-6 left-2 bg-[#1e1e1e] border border-white/8 rounded-2xl p-5 shadow-2xl w-38" style="animation-delay:0s">
-              <div class="w-11 h-11 bg-[#e02020]/20 rounded-xl flex items-center justify-center mb-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e02020" stroke-width="1.5" stroke-linecap="round"><path d="M11.5 12.5L15 9M9 15l-1.5 1.5M16 8l-1 1M14 3l7 7-2 2-2-2-3 3c.5 1.5.5 3-1 4.5S9 19 7.5 19.5 4 19 3 18s-.5-4 1-5.5S7 11 8.5 11.5l3-3-2-2 2-2z"/></svg>
-              </div>
-              <div class="text-white font-bold text-sm">Guitar</div>
-              <div class="text-white/35 text-xs mt-0.5">Acoustic & Electric</div>
-            </div>
-
-            <div class="instrument-card absolute top-2 right-6 bg-[#1e1e1e] border border-white/8 rounded-2xl p-5 shadow-2xl w-38" style="animation-delay:1.1s">
-              <div class="w-11 h-11 bg-[#e8a020]/20 rounded-xl flex items-center justify-center mb-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e8a020" stroke-width="1.5" stroke-linecap="round"><ellipse cx="12" cy="11" rx="8" ry="3"/><path d="M4 11v5c0 1.66 3.58 3 8 3s8-1.34 8-3v-5"/><path d="M16 4l2-2M8 4L6 2"/></svg>
-              </div>
-              <div class="text-white font-bold text-sm">Drums</div>
-              <div class="text-white/35 text-xs mt-0.5">Kit & Percussion</div>
-            </div>
-
-            <div class="instrument-card absolute bottom-14 left-6 bg-[#1e1e1e] border border-white/8 rounded-2xl p-5 shadow-2xl w-38" style="animation-delay:2s">
-              <div class="w-11 h-11 bg-[#4a6fa5]/25 rounded-xl flex items-center justify-center mb-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6b8fc4" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M6 5v6M10 5v6M14 5v6M18 5v6M8 5v4M12 5v4M16 5v4"/></svg>
-              </div>
-              <div class="text-white font-bold text-sm">Piano</div>
-              <div class="text-white/35 text-xs mt-0.5">Keys & Theory</div>
-            </div>
-
-            <div class="instrument-card absolute bottom-6 right-2 bg-[#1e1e1e] border border-white/8 rounded-2xl p-5 shadow-2xl w-38" style="animation-delay:0.6s">
-              <div class="w-11 h-11 bg-[#e02020]/20 rounded-xl flex items-center justify-center mb-3">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#e02020" stroke-width="1.5" stroke-linecap="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4M8 23h8"/></svg>
-              </div>
-              <div class="text-white font-bold text-sm">Voice</div>
-              <div class="text-white/35 text-xs mt-0.5">Singing & Performance</div>
-            </div>
-
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[72px] h-[72px] bg-[#e02020] rounded-full flex items-center justify-center shadow-2xl shadow-[#e02020]/50">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M9 18V5l12-2v13M9 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm12-2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"/></svg>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROGRAMS -->
-  <section id="programs" class="py-20 bg-[#f5f4f0]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-12">
-        <span class="text-[#e02020] font-bold text-xs tracking-widest uppercase">What We Offer</span>
-        <h2 class="text-4xl sm:text-5xl font-black mt-2 mb-4" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;">Our Programs</h2>
-        <p class="text-[#6b6660] text-lg max-w-xl mx-auto">From one-on-one lessons to full band camps — we have a program for every young musician.</p>
-      </div>
-
-      <!-- Filter tabs -->
-      <div class="flex justify-center gap-2 mb-10 flex-wrap">
-        <button class="tab-btn active-tab px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 border" data-tab="all">All Programs</button>
-        <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 border" data-tab="lessons">Lessons</button>
-        <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 border" data-tab="camps">Camps</button>
-        <button class="tab-btn px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-200 border" data-tab="schools">Schools</button>
-      </div>
-
-      <div id="programs-grid" class="grid md:grid-cols-3 gap-6">
-        <!-- Private Lessons -->
-        <div class="program-card bg-white rounded-3xl overflow-hidden border border-[#e0ddd6] hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300" data-category="lessons">
-          <div class="h-44 relative flex items-end p-6" style="background:linear-gradient(135deg,#e02020 0%,#8b1010 100%);">
-            <div class="absolute top-5 right-5 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M9 18V5l12-2v13M9 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm12-2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"/></svg>
-            </div>
-            <div>
-              <span class="text-white/60 text-xs font-bold uppercase tracking-widest">Year-Round</span>
-              <h3 class="text-white font-black text-2xl" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.05em;">Private Lessons</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-[#6b6660] text-sm mb-5 leading-relaxed">One-on-one instruction tailored to your child's pace, goals, and favorite music. Weekly sessions with the same dedicated teacher.</p>
-            <div class="flex flex-wrap gap-1.5 mb-5">
-              {["Guitar","Piano","Drums","Voice","Bass","Songwriting"].map(item => (
-                <span class="bg-[#f5f4f0] text-[#3d3d3d] text-xs font-semibold px-3 py-1 rounded-full">{item}</span>
-              ))}
-            </div>
-            <button class="schedule-btn w-full bg-[#1a1a1a] hover:bg-[#e02020] text-white text-sm font-bold py-3 rounded-2xl transition-all duration-200" data-program="lessons">View Sample Schedule →</button>
-          </div>
-        </div>
-
-        <!-- Camps -->
-        <div class="program-card bg-white rounded-3xl overflow-hidden border border-[#e0ddd6] hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300" data-category="camps">
-          <div class="h-44 relative flex items-end p-6" style="background:linear-gradient(135deg,#e8a020 0%,#9a6010 100%);">
-            <div class="absolute top-5 right-5 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-            </div>
-            <div>
-              <span class="text-white/60 text-xs font-bold uppercase tracking-widest">Summer & Breaks</span>
-              <h3 class="text-white font-black text-2xl" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.05em;">Music Camps</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-[#6b6660] text-sm mb-5 leading-relaxed">Week-long immersive camps where kids learn songs, form real bands, rehearse every day, and perform live at the end.</p>
-            <div class="flex flex-wrap gap-1.5 mb-5">
-              {["Summer Camps","Band Workshops","Performance Day","School Break","Rock Camp","Recording"].map(item => (
-                <span class="bg-[#f5f4f0] text-[#3d3d3d] text-xs font-semibold px-3 py-1 rounded-full">{item}</span>
-              ))}
-            </div>
-            <button class="schedule-btn w-full bg-[#1a1a1a] hover:bg-[#e8a020] text-white text-sm font-bold py-3 rounded-2xl transition-all duration-200" data-program="camps">View Sample Schedule →</button>
-          </div>
-        </div>
-
-        <!-- Schools -->
-        <div class="program-card bg-white rounded-3xl overflow-hidden border border-[#e0ddd6] hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300" data-category="schools">
-          <div class="h-44 relative flex items-end p-6" style="background:linear-gradient(135deg,#4a6fa5 0%,#1e3d6e 100%);">
-            <div class="absolute top-5 right-5 w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
-            <div>
-              <span class="text-white/60 text-xs font-bold uppercase tracking-widest">Partnerships</span>
-              <h3 class="text-white font-black text-2xl" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.05em;">School Programs</h3>
-            </div>
-          </div>
-          <div class="p-6">
-            <p class="text-[#6b6660] text-sm mb-5 leading-relaxed">After-school clubs, enrichment classes, assemblies, and year-round school partnerships that integrate into your existing schedule.</p>
-            <div class="flex flex-wrap gap-1.5 mb-5">
-              {["After-School Clubs","Enrichment Classes","Assemblies","Year-Round","PTA Events","Custom Workshops"].map(item => (
-                <span class="bg-[#f5f4f0] text-[#3d3d3d] text-xs font-semibold px-3 py-1 rounded-full">{item}</span>
-              ))}
-            </div>
-            <button class="schedule-btn w-full bg-[#1a1a1a] hover:bg-[#4a6fa5] text-white text-sm font-bold py-3 rounded-2xl transition-all duration-200" data-program="schools">View Sample Schedule →</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Schedule preview panel -->
-      <div id="schedule-panel" class="hidden mt-8 bg-white rounded-3xl border border-[#e0ddd6] overflow-hidden shadow-sm">
-        <div class="p-6 border-b border-[#e0ddd6] flex items-center justify-between">
-          <h3 id="schedule-title" class="font-black text-xl" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.03em;">Sample Schedule</h3>
-          <button id="close-schedule" class="w-8 h-8 rounded-full bg-[#f5f4f0] hover:bg-[#e0ddd6] flex items-center justify-center text-sm font-bold transition-colors">✕</button>
-        </div>
-        <div id="schedule-content" class="p-6 overflow-x-auto"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY PARENTS LOVE IT -->
-  <section class="py-20 bg-[#1a1a1a]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-14">
-        <span class="text-[#e8a020] font-bold text-xs tracking-widest uppercase">Why Families Choose Us</span>
-        <h2 class="text-4xl sm:text-5xl font-black text-white mt-2" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;">Why Parents Love It</h2>
-      </div>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {[
-          { icon:"🎤", title:"Confidence Through Music", desc:"Kids learn to express themselves, perform in front of others, and build real self-esteem that carries into every part of life." },
-          { icon:"🎸", title:"Real Performance Opportunities", desc:"Students perform at end-of-camp showcases, school events, and recitals — real stages, real audiences, real memories." },
-          { icon:"🌱", title:"Beginner-Friendly Instruction", desc:"No prior experience needed. Our teachers meet students exactly where they are and make learning fun from day one." },
-          { icon:"📅", title:"Flexible for Busy Families", desc:"Lessons, camps, and school programs on schedules that work for real families — mornings, afternoons, evenings, and summer." },
-          { icon:"🎓", title:"Experienced Local Musicians", desc:"Our teachers are working Cleveland musicians who love teaching — mentors who understand the local music scene." },
-          { icon:"🤝", title:"Community-First", desc:"We're a Cleveland organization built to serve Cleveland kids. Everything we do is rooted in this city and its musical tradition." },
-        ].map(item => (
-          <div class="benefit-card bg-[#242424] hover:bg-[#2d2d2d] border border-white/5 hover:border-[#e02020]/25 rounded-3xl p-7 transition-all duration-300 group">
-            <div class="text-3xl mb-4">{item.icon}</div>
-            <h3 class="text-white font-bold text-lg mb-2 group-hover:text-[#e02020] transition-colors duration-200">{item.title}</h3>
-            <p class="text-white/45 text-sm leading-relaxed">{item.desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <!-- ROCK BAND CAMP FEATURE -->
-  <section id="camps" class="py-20 bg-[#f5f4f0]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="rounded-3xl overflow-hidden relative" style="background:linear-gradient(135deg,#1a1a1a 0%,#2a1a1a 100%);">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-[#e02020]/8 rounded-full blur-3xl -translate-y-1/3 translate-x-1/4 pointer-events-none"></div>
-        <div class="absolute bottom-0 left-0 w-72 h-72 bg-[#e8a020]/8 rounded-full blur-3xl translate-y-1/3 -translate-x-1/5 pointer-events-none"></div>
-
-        <div class="relative grid lg:grid-cols-2">
-          <div class="p-10 lg:p-14">
-            <div class="inline-flex items-center gap-2 bg-[#e02020] rounded-full px-4 py-1.5 mb-6">
-              <span class="text-white text-xs font-bold tracking-widest uppercase">Featured Program</span>
-            </div>
-            <h2 class="text-white font-black leading-none" style="font-size:clamp(3rem,6vw,5rem);font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;">ROCK</h2>
-            <h2 class="text-[#e02020] font-black leading-none mb-6" style="font-size:clamp(3rem,6vw,5rem);font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;">BAND CAMP</h2>
-            <p class="text-white/65 text-base leading-relaxed mb-8 max-w-md">The ultimate summer experience for young musicians. Kids form real bands, learn real songs, rehearse together, and perform live at the end of camp. It's not a recital — it's a concert.</p>
-
-            <div class="grid grid-cols-2 gap-3 mb-8">
-              {[{label:"Ages",value:"8–16"},{label:"Level",value:"Beg–Int"},{label:"Duration",value:"1 Week"},{label:"Finale",value:"Live Show"}].map(item=>(
-                <div class="bg-white/5 border border-white/10 rounded-2xl p-4">
-                  <div class="text-[#e8a020] text-xs font-bold uppercase tracking-wider mb-1">{item.label}</div>
-                  <div class="text-white font-black text-lg" style="font-family:'Bebas Neue',sans-serif;">{item.value}</div>
-                </div>
-              ))}
-            </div>
-
-            <div class="space-y-2.5 mb-8">
-              {["Learn 4–6 songs in your genre of choice","Collaborate with a real band of peers","Daily rehearsals with professional coaching","End-of-week live performance for family & friends","Beginner-friendly — no prior band experience needed"].map(item=>(
-                <div class="flex items-start gap-3 text-white/65 text-sm">
-                  <svg class="text-[#e02020] mt-0.5 shrink-0" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                  {item}
-                </div>
-              ))}
-            </div>
-
-            <button id="camp-book-btn" class="bg-[#e02020] hover:bg-[#b51a1a] text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:scale-105 hover:shadow-xl hover:shadow-[#e02020]/30">Reserve a Spot</button>
-          </div>
-
-          <!-- Week schedule visual -->
-          <div class="hidden lg:flex items-center justify-center p-10">
-            <div class="bg-white/5 border border-white/10 rounded-3xl p-8 w-72">
-              <div class="text-white font-bold text-sm mb-6 flex items-center gap-2">
-                <div class="w-2 h-2 bg-[#e02020] rounded-full"></div>
-                Sample Camp Week
-              </div>
-              {[
-                {day:"Monday",activity:"Instrument skills & band matching",color:"#e02020"},
-                {day:"Tuesday",activity:"Song selection & first rehearsal",color:"#e8a020"},
-                {day:"Wednesday",activity:"Deep rehearsal + studio basics",color:"#4a6fa5"},
-                {day:"Thursday",activity:"Sound check & performance prep",color:"#e8a020"},
-                {day:"Friday",activity:"🎸 LIVE CONCERT PERFORMANCE",color:"#e02020"},
-              ].map(item=>(
-                <div class="flex items-start gap-3 mb-4">
-                  <div class="w-2 h-2 rounded-full mt-1.5 shrink-0" style={`background:${item.color}`}></div>
-                  <div>
-                    <div class="text-white text-xs font-bold">{item.day}</div>
-                    <div class="text-white/45 text-xs mt-0.5">{item.activity}</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SCHOOL PARTNERSHIPS -->
-  <section id="schools" class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
-        <div>
-          <span class="text-[#4a6fa5] font-bold text-xs tracking-widest uppercase">For Principals, PTAs & Administrators</span>
-          <h2 class="text-4xl sm:text-5xl font-black mt-2 mb-6" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;">Bring Music to<br/><span class="text-[#4a6fa5]">Your School</span></h2>
-          <p class="text-[#6b6660] text-lg leading-relaxed mb-8">We partner with schools to bring meaningful music programming directly into your building. No special facilities needed. No long-term commitment required. Just great music education your students will love.</p>
-
-          <div class="space-y-5 mb-10">
-            {[
-              {title:"After-School Music Clubs", desc:"Weekly recurring clubs led by our instructors — guitar, drums, songwriting, and more. Perfect for enrichment blocks."},
-              {title:"Enrichment & Elective Classes", desc:"Multi-week curriculum-aligned programs that integrate with your school's existing arts offerings."},
-              {title:"Assemblies & Special Events", desc:"Engaging, high-energy music performances and workshops for full-school assemblies and PTA nights."},
-              {title:"Year-Round School Partnerships", desc:"Ongoing relationships with dedicated programming, school-specific branding, and full admin support."},
-            ].map(item=>(
-              <div class="flex gap-4 group">
-                <div class="w-8 h-8 bg-[#4a6fa5]/10 group-hover:bg-[#4a6fa5] rounded-xl flex items-center justify-center shrink-0 mt-0.5 transition-all duration-200">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" class="text-[#4a6fa5] group-hover:text-white transition-colors"><polyline points="20 6 9 17 4 12"/></svg>
-                </div>
-                <div>
-                  <h4 class="font-bold text-[#1a1a1a] mb-0.5">{item.title}</h4>
-                  <p class="text-[#6b6660] text-sm">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <a href="#contact" class="inline-flex items-center gap-2 bg-[#4a6fa5] hover:bg-[#2d4f85] text-white font-bold px-8 py-4 rounded-full transition-all duration-200 hover:scale-105">
-            Contact for School Programs
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <h1 class="text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl">
+          The fulfillment workspace for print&nbsp;shops
+        </h1>
+        <p class="max-w-md text-lg text-muted-foreground">
+          Pack orders, buy discounted shipping labels, print packing slips, and notify customers — whether you ship, deliver locally, or hand off at the counter.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="https://app.packed.ink" class="inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+            Start packing — it's free
+          </a>
+          <a href="#how-it-works" class="inline-flex h-11 items-center rounded-md border px-6 text-sm font-medium transition-colors hover:bg-muted">
+            See how it works
           </a>
         </div>
+      </div>
 
-        <div class="grid grid-cols-2 gap-4">
-          {[
-            {value:"30+",label:"School Partners",bg:"bg-[#4a6fa5]",text:"text-white"},
-            {value:"5,000+",label:"Students Reached",bg:"bg-[#1a1a1a]",text:"text-white"},
-            {value:"12",label:"Program Formats",bg:"bg-[#e8a020]",text:"text-white"},
-            {value:"100%",label:"Would Partner Again",bg:"bg-[#f5f4f0]",text:"text-[#1a1a1a]"},
-          ].map(item=>(
-            <div class={`${item.bg} rounded-3xl p-8 flex flex-col justify-between min-h-36`}>
-              <div class={`${item.text} font-black text-4xl`} style="font-family:'Bebas Neue',sans-serif;">{item.value}</div>
-              <div class={`${item.text} text-sm font-semibold opacity-75`}>{item.label}</div>
+      <!-- Right — app preview mockup -->
+      <div class="relative mt-12 md:mt-0">
+        <div class="flex overflow-hidden rounded-lg border shadow-xl">
+          <!-- Sidebar mock -->
+          <div class="hidden w-48 flex-shrink-0 bg-sidebar p-4 text-sidebar-foreground sm:block">
+            <div class="mb-6 flex items-center gap-2">
+              <span class="inline-flex items-center justify-center rounded-md bg-sidebar-primary p-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+              </span>
+              <span class="text-sm font-bold tracking-tight">Packed</span>
             </div>
-          ))}
-          <div class="col-span-2 bg-[#edf2f9] border border-[#4a6fa5]/20 rounded-3xl p-6">
-            <div class="flex items-start gap-3">
-              <div class="w-10 h-10 bg-[#4a6fa5] rounded-xl flex items-center justify-center shrink-0">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2 rounded-md bg-sidebar-accent px-2.5 py-1.5 text-xs font-medium">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                Dashboard
               </div>
-              <div>
-                <div class="font-bold text-[#1a1a1a] text-sm mb-1">Works with any school</div>
-                <div class="text-[#6b6660] text-xs leading-relaxed">Public, charter, private, or community center — we adapt to your building, schedule, and student population. No special equipment required.</div>
+              <div class="flex items-center gap-2 px-2.5 py-1.5 text-xs text-sidebar-foreground/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                Orders
+              </div>
+              <div class="flex items-center gap-2 px-2.5 py-1.5 text-xs text-sidebar-foreground/60">
+                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+                Settings
+              </div>
+            </div>
+          </div>
+          <!-- Content mock -->
+          <div class="flex-1 bg-card p-5">
+            <h3 class="mb-4 text-sm font-bold tracking-tight text-card-foreground">Dashboard</h3>
+            <div class="mb-4 grid grid-cols-3 gap-2">
+              <div class="rounded-md border p-3">
+                <p class="text-xs text-muted-foreground">Total orders</p>
+                <p class="text-lg font-bold tracking-tight">128</p>
+              </div>
+              <div class="rounded-md border p-3">
+                <p class="text-xs text-muted-foreground">Packing</p>
+                <p class="text-lg font-bold tracking-tight">5</p>
+              </div>
+              <div class="rounded-md border p-3">
+                <p class="text-xs text-muted-foreground">Shipped</p>
+                <p class="text-lg font-bold tracking-tight">112</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <div class="flex items-center justify-between rounded-md border px-3 py-2">
+                <div>
+                  <p class="text-xs font-medium">Order #1042</p>
+                  <p class="text-xs text-muted-foreground">Sarah M. — USPS Priority</p>
+                </div>
+                <span class="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-600">Shipped</span>
+              </div>
+              <div class="flex items-center justify-between rounded-md border px-3 py-2">
+                <div>
+                  <p class="text-xs font-medium">Order #1041</p>
+                  <p class="text-xs text-muted-foreground">James K. — Local pickup</p>
+                </div>
+                <span class="rounded-md bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-600">Packing</span>
+              </div>
+              <div class="flex items-center justify-between rounded-md border px-3 py-2">
+                <div>
+                  <p class="text-xs font-medium">Order #1040</p>
+                  <p class="text-xs text-muted-foreground">Devon R. — UPS Ground</p>
+                </div>
+                <span class="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-600">Shipped</span>
               </div>
             </div>
           </div>
@@ -363,321 +123,356 @@ import '../styles/global.css';
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="py-20 bg-[#f5f4f0]">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6">
-      <div class="text-center mb-14">
-        <span class="text-[#e02020] font-bold text-xs tracking-widest uppercase">Hear From Our Community</span>
-        <h2 class="text-4xl sm:text-5xl font-black mt-2" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;">What People Are Saying</h2>
+  <!-- ═══════════════ FEATURES ═══════════════ -->
+  <section id="features" class="border-t bg-muted/50 py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 max-w-2xl">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Everything between the order and the door</h2>
+        <p class="mt-3 text-muted-foreground">
+          Ship, deliver locally, or prep for pickup — Packed gives your team one workspace to manage it all.
+        </p>
       </div>
-      <div class="grid md:grid-cols-3 gap-6">
-        {[
-          {quote:"My daughter was shy and reluctant to even try guitar. After one summer at Rock Band Camp she came home talking about wanting to start a band. I've never seen her more confident. Cleveland Rocks gave her something I couldn't — a stage.",name:"Maria Torres",role:"Parent of 12-year-old guitarist",initials:"MT",color:"#e02020"},
-          {quote:"I was nervous the first day of camp because I barely knew how to play drums. But by Friday I was performing in front of like 200 people. It was the coolest thing I've ever done. My teacher was super patient and showed us real songs, not just boring exercises.",name:"Jaylen W.",role:"Student, Age 14",initials:"JW",color:"#e8a020"},
-          {quote:"We brought Cleveland Rocks into our school for an after-school music club and it has been a game changer. The program is professional, the instructors are fantastic with kids, and our enrollment has grown every semester. Exactly the enrichment our students needed.",name:"Dr. Patricia Henderson",role:"Principal, Westlake Elementary",initials:"PH",color:"#4a6fa5"},
-        ].map(item=>(
-          <div class="bg-white rounded-3xl p-8 border border-[#e0ddd6] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
-            <div class="flex gap-1 mb-5">
-              {[1,2,3,4,5].map(()=>(
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="#e8a020"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-              ))}
-            </div>
-            <p class="text-[#3d3d3d] text-sm leading-relaxed mb-6 flex-1">"{item.quote}"</p>
-            <div class="flex items-center gap-3 pt-4 border-t border-[#f0ede8]">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-xs font-bold shrink-0" style={`background:${item.color}`}>{item.initials}</div>
-              <div>
-                <div class="font-bold text-[#1a1a1a] text-sm">{item.name}</div>
-                <div class="text-[#6b6660] text-xs">{item.role}</div>
-              </div>
-            </div>
+
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Feature 1 — Orders & Fulfillment -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
           </div>
-        ))}
+          <h3 class="font-bold tracking-tight">Orders &amp; fulfillment</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Create orders with line items, assign customers, and choose a fulfillment method — shipping, local delivery, or in-store pickup. Filter, search, and track status from Pending to Shipped.
+          </p>
+        </div>
+
+        <!-- Feature 2 — Drag-and-Drop Packing -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Drag-and-drop packing</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Drag items from the order directly into boxes. Each box tracks its contents and weight. Apply saved package presets in one click for your most-used box sizes.
+          </p>
+        </div>
+
+        <!-- Feature 3 — Multi-Carrier Shipping -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17h4V5H2v12h3"/><path d="M20 17h2v-3.34a4 4 0 0 0-1.17-2.83L19 9h-5v8h1"/><circle cx="7.5" cy="17.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Multi-carrier shipping labels</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Get live rates from USPS, UPS, and FedEx. Purchase per-box labels or buy all labels at once in bulk. Enter manual tracking for off-platform shipments too.
+          </p>
+        </div>
+
+        <!-- Feature 4 — Live Tracking -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Live tracking</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Every shipment gets an expandable tracking timeline. Pull the latest carrier updates with one click and see exactly where each package is.
+          </p>
+        </div>
+
+        <!-- Feature 5 — Customer Directory -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Customer directory</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Keep a searchable directory of customers with contact info, shipping addresses, and full order history. Assign returning customers to new orders instantly.
+          </p>
+        </div>
+
+        <!-- Feature 6 — Customer Notifications -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Customer notifications</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Send branded shipment confirmation or pickup-ready emails with tracking info. Customize the sender name and footer to match your shop.
+          </p>
+        </div>
+
+        <!-- Feature 7 — Document Template Editor -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M2 15s2-2 4-2 4 2 4 2"/><path d="M2 19s2-2 4-2 4 2 4 2"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Document template editor</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Design packing slips and box labels with a drag-and-drop block editor. Choose 1- or 2-column layouts, add logos and QR codes, and preview against real orders. Letter and thermal 4×6 formats.
+          </p>
+        </div>
+
+        <!-- Feature 8 — Printing -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">Packing slips &amp; labels</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Print packing slips, box labels, and pickup labels in one click. Multiple templates per type with a default — choose from a dropdown right on the order page.
+          </p>
+        </div>
+
+        <!-- Feature 9 — White-Label Branding -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">White-label branding</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Upload your logo, set your shop name and reply-to email, and customize every customer-facing document. Remove the Packed watermark so everything looks like yours.
+          </p>
+        </div>
+
+        <!-- Feature 10 — API & Webhooks -->
+        <div class="rounded-md border bg-card p-6">
+          <div class="mb-3 inline-flex items-center justify-center rounded-md bg-accent/10 p-2 text-accent">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg>
+          </div>
+          <h3 class="font-bold tracking-tight">API &amp; webhooks</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Connect Packed to Shopify, Etsy, or your own ERP with a full REST API. Register webhook endpoints for order and shipment events with HMAC-signed payloads.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
-  <section id="contact" class="py-24 bg-[#e02020] relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10" style="background:radial-gradient(ellipse at 25% 50%, white 0%, transparent 55%), radial-gradient(ellipse at 75% 30%, #e8a020 0%, transparent 45%);"></div>
-    <div class="absolute inset-0 opacity-[0.06]" style="background-image:linear-gradient(rgba(255,255,255,0.5) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.5) 1px,transparent 1px);background-size:52px 52px;"></div>
-    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
-      <div class="text-6xl mb-5">🎸</div>
-      <h2 class="text-white font-black mb-4" style="font-size:clamp(3.5rem,9vw,7rem);font-family:'Bebas Neue',sans-serif;letter-spacing:0.02em;line-height:0.88;">READY TO ROCK?</h2>
-      <p class="text-white/85 text-lg sm:text-xl leading-relaxed mb-10 max-w-2xl mx-auto">Whether your child is picking up an instrument for the first time or ready to join a band, Cleveland Rocks Music Academy gives them a place to learn, play, and perform.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <button id="cta-book-btn" class="bg-white hover:bg-[#f5f4f0] text-[#e02020] font-black px-10 py-5 rounded-full text-lg transition-all duration-200 hover:scale-105 hover:shadow-2xl">Book a Free Intro</button>
-        <a href="#programs" class="border-2 border-white/50 hover:border-white text-white font-bold px-10 py-5 rounded-full text-lg transition-all duration-200 hover:bg-white/10">Explore Programs</a>
+  <!-- ═══════════════ HOW IT WORKS ═══════════════ -->
+  <section id="how-it-works" class="border-t py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 max-w-2xl">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Four steps. Order to doorstep.</h2>
+        <p class="mt-3 text-muted-foreground">
+          Whether you ship, deliver locally, or hand off at the counter — the workflow is the same.
+        </p>
+      </div>
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="relative">
+          <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">1</div>
+          <h3 class="font-bold tracking-tight">Create the order</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Add line items, assign a customer, and choose a fulfillment method — shipping, local delivery, or in-store pickup.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">2</div>
+          <h3 class="font-bold tracking-tight">Drag items into boxes</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Drag-and-drop items from the order into boxes. Apply package presets or enter custom dimensions. Each box tracks contents and weight.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">3</div>
+          <h3 class="font-bold tracking-tight">Ship or mark ready</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Buy discounted labels from USPS, UPS, or FedEx — per box or all at once. For pickup orders, mark them ready with one click.
+          </p>
+        </div>
+        <div class="relative">
+          <div class="mb-3 flex h-8 w-8 items-center justify-center rounded-md bg-primary text-sm font-bold text-primary-foreground">4</div>
+          <h3 class="font-bold tracking-tight">Notify &amp; track</h3>
+          <p class="mt-1 text-sm text-muted-foreground">
+            Send a branded tracking email or pickup notification. Follow every package with live carrier updates and an event timeline.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-[#111] py-10">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+  <!-- ═══════════════ PRICING ═══════════════ -->
+  <section id="pricing" class="border-t bg-muted/50 py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Simple pricing. Start free.</h2>
+        <p class="mt-3 text-muted-foreground">
+          Shipping labels work out of the box on the free plan. Upgrade when you need volume and customer-facing features.
+        </p>
+      </div>
+
+      <div class="mx-auto grid max-w-3xl gap-6 md:grid-cols-2">
+        <!-- Free tier -->
+        <div class="rounded-md border bg-card p-6">
+          <h3 class="font-bold tracking-tight">Free</h3>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-3xl font-bold tracking-tight">$0</span>
+            <span class="text-sm text-muted-foreground">/month</span>
+          </div>
+          <p class="mt-2 text-sm text-muted-foreground">Core fulfillment tools to get started.</p>
+          <a href="https://app.packed.ink" class="mt-6 flex h-10 w-full items-center justify-center rounded-md border text-sm font-medium transition-colors hover:bg-muted">
+            Get started
+          </a>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Manual orders &amp; drag-and-drop packing
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Box label printing
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Shipping label purchasing (USPS, UPS, FedEx)
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Up to 10 shipments per month
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Dashboard, customer directory &amp; live tracking
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pro tier -->
+        <div class="relative rounded-md border-2 border-accent bg-card p-6">
+          <span class="absolute -top-3 right-4 rounded-md bg-accent px-2.5 py-0.5 text-xs font-medium text-accent-foreground">Pro</span>
+          <h3 class="font-bold tracking-tight">Pro</h3>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-3xl font-bold tracking-tight">$9</span>
+            <span class="text-sm text-muted-foreground">/month</span>
+          </div>
+          <p class="mt-2 text-sm text-muted-foreground">For shops that ship at volume and care about customer experience.</p>
+          <a href="https://app.packed.ink" class="mt-6 flex h-10 w-full items-center justify-center rounded-md bg-primary text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+            Upgrade to Pro
+          </a>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Everything in Free
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              <strong>Unlimited</strong> shipments
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Package presets
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Customer email notifications
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Packing slips &amp; pickup labels
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Document template editor
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              REST API &amp; webhooks
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Remove Packed branding
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-emerald-500"><path d="M20 6 9 17l-5-5"/></svg>
+              Billing portal (invoices, card management)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ INTEGRATIONS ═══════════════ -->
+  <section class="border-t py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mx-auto grid max-w-4xl items-center gap-12 md:grid-cols-2">
+        <div>
+          <div class="mb-4 inline-flex items-center gap-1.5 rounded-md border bg-muted px-3 py-1 text-xs font-medium text-muted-foreground">
+            Pro
+          </div>
+          <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Connect to anything</h2>
+          <p class="mt-3 text-muted-foreground">
+            Sync Packed with Shopify, Etsy, or your own ERP. Generate a REST API key, register webhook endpoints for order and shipment events, and automate your entire fulfillment pipeline.
+          </p>
+          <ul class="mt-6 space-y-3 text-sm">
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-accent"><path d="M20 6 9 17l-5-5"/></svg>
+              Full REST API with Bearer token auth
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-accent"><path d="M20 6 9 17l-5-5"/></svg>
+              Webhooks for order &amp; box lifecycle events
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-accent"><path d="M20 6 9 17l-5-5"/></svg>
+              Per-webhook HMAC signing secrets
+            </li>
+            <li class="flex items-start gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mt-0.5 shrink-0 text-accent"><path d="M20 6 9 17l-5-5"/></svg>
+              Manage multiple webhook endpoints
+            </li>
+          </ul>
+        </div>
+        <!-- Code snippet mockup -->
+        <div class="rounded-lg border bg-sidebar p-5 font-mono text-xs leading-relaxed text-sidebar-foreground">
+          <div class="mb-3 flex items-center gap-1.5">
+            <span class="h-2.5 w-2.5 rounded-full bg-red-500/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-yellow-500/60"></span>
+            <span class="h-2.5 w-2.5 rounded-full bg-green-500/60"></span>
+          </div>
+          <pre class="overflow-x-auto"><code><span class="text-emerald-400">POST</span> /api/webhooks
+<span class="text-sidebar-foreground/50">{</span>
+  <span class="text-sky-400">"url"</span>: <span class="text-amber-300">"https://your-app.com/hook"</span>,
+  <span class="text-sky-400">"events"</span>: [
+    <span class="text-amber-300">"order.shipped"</span>,
+    <span class="text-amber-300">"box.packed"</span>
+  ]
+<span class="text-sidebar-foreground/50">}</span>
+
+<span class="text-sidebar-foreground/50">→</span> <span class="text-emerald-400">201</span> Created</code></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ CTA ═══════════════ -->
+  <section class="border-t bg-muted/50 py-20 md:py-28">
+    <div class="mx-auto max-w-6xl px-6 text-center">
+      <h2 class="text-3xl font-bold tracking-tight md:text-4xl">Ready to streamline your fulfillment?</h2>
+      <p class="mx-auto mt-3 max-w-lg text-muted-foreground">
+        Create your workspace in under a minute. No credit card required — shipping labels work on the free plan.
+      </p>
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <a href="https://app.packed.ink" class="inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+          Start packing — it's free
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="border-t bg-muted/30 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
       <div class="flex items-center gap-2">
-        <div class="w-7 h-7 bg-[#e02020] rounded flex items-center justify-center">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="white"><path d="M9 18V5l12-2v13M9 18c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2zm12-2c0 1.1-.9 2-2 2s-2-.9-2-2 .9-2 2-2 2 .9 2 2z"/></svg>
-        </div>
-        <span class="text-white font-bold text-sm">Cleveland <span class="text-[#e02020]">Rocks</span> Music Academy</span>
+        <span class="inline-flex items-center justify-center rounded-md bg-primary p-1 text-primary-foreground">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+        </span>
+        <span>&copy; {new Date().getFullYear()} Packed. All rights reserved.</span>
       </div>
-      <p class="text-white/25 text-xs">© 2025 Cleveland Rocks Music Academy · Greater Cleveland, Ohio</p>
-      <div class="flex gap-6 text-white/35 text-xs">
-        <a href="#programs" class="hover:text-white/70 transition-colors">Programs</a>
-        <a href="#camps" class="hover:text-white/70 transition-colors">Camps</a>
-        <a href="#schools" class="hover:text-white/70 transition-colors">Schools</a>
+      <div class="flex gap-6">
+        <a href="https://app.packed.ink" class="transition-colors hover:text-foreground">Log in</a>
+        <a href="https://app.packed.ink" class="transition-colors hover:text-foreground">Sign up</a>
       </div>
     </div>
   </footer>
 
-  <!-- BOOKING MODAL -->
-  <div id="booking-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 hidden">
-    <div id="modal-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
-    <div class="relative bg-white rounded-3xl w-full max-w-md shadow-2xl overflow-hidden">
-      <div class="px-8 py-7 flex items-start justify-between" style="background:linear-gradient(135deg,#e02020,#8b1010);">
-        <div>
-          <h3 class="text-white font-black text-2xl" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.05em;">BOOK YOUR FREE INTRO</h3>
-          <p class="text-white/75 text-sm mt-1">No commitment · 30 minutes · Meet your teacher</p>
-        </div>
-        <button id="close-modal" class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/35 flex items-center justify-center text-white text-sm transition-colors ml-4 shrink-0 mt-0.5">✕</button>
-      </div>
-
-      <div id="modal-form-container" class="px-8 py-7">
-        <form id="booking-form" class="space-y-5">
-          <div>
-            <label class="block text-[#1a1a1a] text-sm font-semibold mb-1.5">Parent / Guardian Name</label>
-            <input type="text" placeholder="Sarah Johnson" class="w-full border border-[#e0ddd6] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e02020]/20 focus:border-[#e02020] transition-all" />
-          </div>
-          <div>
-            <label class="block text-[#1a1a1a] text-sm font-semibold mb-1.5">Student's Age</label>
-            <select class="w-full border border-[#e0ddd6] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e02020]/20 focus:border-[#e02020] transition-all bg-white">
-              <option value="">Select age</option>
-              {Array.from({length:13},(_,i)=>i+5).map(age=>(
-                <option value={age}>{age} years old</option>
-              ))}
-            </select>
-          </div>
-          <div>
-            <label class="block text-[#1a1a1a] text-sm font-semibold mb-1.5">Program Interest</label>
-            <select class="w-full border border-[#e0ddd6] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e02020]/20 focus:border-[#e02020] transition-all bg-white">
-              <option value="">Select a program</option>
-              <option>Private Guitar Lessons</option>
-              <option>Private Piano Lessons</option>
-              <option>Private Drum Lessons</option>
-              <option>Private Voice Lessons</option>
-              <option>Private Bass Lessons</option>
-              <option>Songwriting Lessons</option>
-              <option>Rock Band Camp</option>
-              <option>Summer Music Camp</option>
-              <option>School Partnership</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-[#1a1a1a] text-sm font-semibold mb-1.5">Email Address</label>
-            <input type="email" placeholder="sarah@example.com" class="w-full border border-[#e0ddd6] rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-[#e02020]/20 focus:border-[#e02020] transition-all" />
-          </div>
-          <button type="submit" class="w-full bg-[#e02020] hover:bg-[#b51a1a] text-white font-bold py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-sm">Request My Free Intro Session</button>
-          <p class="text-center text-[#6b6660] text-xs">We'll reach out within 24 hours to confirm your time.</p>
-        </form>
-      </div>
-
-      <div id="modal-success" class="hidden px-8 py-12 text-center">
-        <div class="w-16 h-16 bg-green-50 rounded-full flex items-center justify-center mx-auto mb-5">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
-        <h4 class="font-black text-2xl text-[#1a1a1a] mb-3" style="font-family:'Bebas Neue',sans-serif;letter-spacing:0.05em;">YOU'RE ALL SET!</h4>
-        <p class="text-[#6b6660] text-sm leading-relaxed mb-6">Thanks for reaching out! We'll contact you within 24 hours to schedule your free intro session. Get ready to rock. 🎸</p>
-        <button id="modal-success-close" class="bg-[#1a1a1a] hover:bg-[#333] text-white font-bold px-8 py-3 rounded-full text-sm transition-all">Done</button>
-      </div>
-    </div>
-  </div>
-
 </Layout>
-
-<style>
-  @keyframes float {
-    0%,100% { transform:translateY(0); }
-    50% { transform:translateY(-10px); }
-  }
-  .instrument-card {
-    animation: float 4.5s ease-in-out infinite;
-  }
-
-  .tab-btn {
-    background: white;
-    color: #6b6660;
-    border-color: #e0ddd6;
-  }
-  .tab-btn:hover {
-    border-color: #1a1a1a;
-    color: #1a1a1a;
-  }
-  .tab-btn.active-tab {
-    background: #1a1a1a;
-    color: white;
-    border-color: #1a1a1a;
-  }
-
-  .program-card { will-change: transform; }
-
-  @keyframes fadeUp {
-    from { opacity:0; transform:translateY(12px); }
-    to { opacity:1; transform:translateY(0); }
-  }
-  .fade-up {
-    animation: fadeUp 0.3s ease forwards;
-  }
-</style>
-
-<script>
-  // Mobile menu
-  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
-  mobileMenuBtn?.addEventListener('click', () => mobileMenu?.classList.toggle('hidden'));
-  document.querySelectorAll('.mobile-nav-link, .mobile-book-btn').forEach(el =>
-    el.addEventListener('click', () => mobileMenu?.classList.add('hidden'))
-  );
-
-  // Modal
-  const modal = document.getElementById('booking-modal');
-  const modalBackdrop = document.getElementById('modal-backdrop');
-  const closeModal = document.getElementById('close-modal');
-  const bookingForm = document.getElementById('booking-form');
-  const modalFormContainer = document.getElementById('modal-form-container');
-  const modalSuccess = document.getElementById('modal-success');
-  const modalSuccessClose = document.getElementById('modal-success-close');
-
-  function openModal() {
-    modal?.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeModalFn() {
-    modal?.classList.add('hidden');
-    document.body.style.overflow = '';
-    setTimeout(() => {
-      modalFormContainer?.classList.remove('hidden');
-      modalSuccess?.classList.add('hidden');
-      (bookingForm as HTMLFormElement)?.reset();
-    }, 250);
-  }
-
-  ['nav-book-btn','hero-book-btn','camp-book-btn','cta-book-btn'].forEach(id =>
-    document.getElementById(id)?.addEventListener('click', openModal)
-  );
-  document.querySelectorAll('.mobile-book-btn').forEach(btn => btn.addEventListener('click', openModal));
-  closeModal?.addEventListener('click', closeModalFn);
-  modalBackdrop?.addEventListener('click', closeModalFn);
-  modalSuccessClose?.addEventListener('click', closeModalFn);
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalFn(); });
-
-  bookingForm?.addEventListener('submit', e => {
-    e.preventDefault();
-    modalFormContainer?.classList.add('hidden');
-    modalSuccess?.classList.remove('hidden');
-  });
-
-  // Program tab filter
-  const tabBtns = document.querySelectorAll('.tab-btn');
-  const programCards = document.querySelectorAll('.program-card');
-  const schedulePanel = document.getElementById('schedule-panel');
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabBtns.forEach(b => b.classList.remove('active-tab'));
-      btn.classList.add('active-tab');
-
-      const tab = btn.getAttribute('data-tab');
-      schedulePanel?.classList.add('hidden');
-
-      programCards.forEach(card => {
-        const el = card as HTMLElement;
-        const cat = card.getAttribute('data-category');
-        if (tab === 'all' || cat === tab) {
-          el.style.display = '';
-          el.classList.add('fade-up');
-          el.addEventListener('animationend', () => el.classList.remove('fade-up'), { once: true });
-        } else {
-          el.style.display = 'none';
-        }
-      });
-    });
-  });
-
-  // Schedule preview
-  type ScheduleKey = 'lessons' | 'camps' | 'schools';
-  const schedules: Record<ScheduleKey, { title: string; color: string; rows: { time: string; detail: string }[] }> = {
-    lessons: {
-      title: "Sample Private Lesson Schedule",
-      color: "#e02020",
-      rows: [
-        { time: "Mon 3:00 PM", detail: "30-min Guitar (Beginner) — Emma, age 9" },
-        { time: "Mon 4:00 PM", detail: "45-min Piano (Intermediate) — Marcus, age 13" },
-        { time: "Wed 3:30 PM", detail: "30-min Voice (Beginner) — Sofia, age 11" },
-        { time: "Wed 5:00 PM", detail: "60-min Drums (Advanced) — Theo, age 15" },
-        { time: "Sat 10:00 AM", detail: "30-min Bass (Beginner) — Lily, age 10" },
-        { time: "Sat 11:00 AM", detail: "45-min Songwriting — Group session (4 students)" },
-      ]
-    },
-    camps: {
-      title: "Sample Summer Camp Day",
-      color: "#e8a020",
-      rows: [
-        { time: "9:00 AM", detail: "Arrival, warm-up jams, instrument skill work" },
-        { time: "10:00 AM", detail: "Band formation & song selection workshop" },
-        { time: "11:30 AM", detail: "Group rehearsal with coach feedback" },
-        { time: "12:30 PM", detail: "Lunch break + open jam session" },
-        { time: "1:30 PM", detail: "Genre deep-dive (rock, pop, R&B, or original)" },
-        { time: "3:00 PM", detail: "Band performance prep + recording preview" },
-        { time: "Fri 4 PM", detail: "🎸 Live Performance Showcase for families" },
-      ]
-    },
-    schools: {
-      title: "Sample School Program Schedule",
-      color: "#4a6fa5",
-      rows: [
-        { time: "Mon 3:15 PM", detail: "Guitar Club — 45 min (8–12 students)" },
-        { time: "Wed 3:15 PM", detail: "Drum & Rhythm Enrichment — 45 min" },
-        { time: "Fri 3:15 PM", detail: "Songwriting & Music Theory Club" },
-        { time: "Monthly", detail: "Full-school music assembly (45–60 min)" },
-        { time: "Quarterly", detail: "Student Showcase performance event" },
-        { time: "On Request", detail: "PTA event, workshop, or school fair performance" },
-      ]
-    }
-  };
-
-  const scheduleTitle = document.getElementById('schedule-title');
-  const scheduleContent = document.getElementById('schedule-content');
-  const closeSchedule = document.getElementById('close-schedule');
-
-  document.querySelectorAll('.schedule-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const program = btn.getAttribute('data-program') as ScheduleKey;
-      const data = schedules[program];
-      if (!data || !scheduleTitle || !scheduleContent || !schedulePanel) return;
-
-      scheduleTitle.textContent = data.title;
-      scheduleContent.innerHTML = `
-        <table class="w-full text-sm min-w-[400px]">
-          <thead>
-            <tr class="border-b border-[#e0ddd6]">
-              <th class="text-left font-bold text-[#6b6660] pb-3 pr-6 w-40 whitespace-nowrap">Time / Day</th>
-              <th class="text-left font-bold text-[#6b6660] pb-3">Program Detail</th>
-            </tr>
-          </thead>
-          <tbody>
-            ${data.rows.map(row => `
-              <tr class="border-b border-[#f5f4f0] hover:bg-[#fafaf8] transition-colors">
-                <td class="py-3 pr-6 font-semibold text-xs whitespace-nowrap" style="color:${data.color}">${row.time}</td>
-                <td class="py-3 text-[#3d3d3d]">${row.detail}</td>
-              </tr>
-            `).join('')}
-          </tbody>
-        </table>
-      `;
-
-      schedulePanel.classList.remove('hidden');
-      schedulePanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
-  });
-
-  closeSchedule?.addEventListener('click', () => schedulePanel?.classList.add('hidden'));
-</script>
