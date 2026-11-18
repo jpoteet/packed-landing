@@ -1,0 +1,38 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout title="Page not found | Packed" description="That page is not on Packed. Head back to the homepage to learn about the fulfillment workspace for print shops.">
+
+  <nav class="sticky top-0 z-50 border-b bg-background/80 backdrop-blur-md">
+    <div class="mx-auto flex h-14 max-w-6xl items-center justify-between px-6">
+      <a href="/" class="flex items-center gap-2 font-bold tracking-tight">
+        <span class="inline-flex items-center justify-center rounded-md bg-primary p-1.5 text-primary-foreground">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+        </span>
+        Packed
+      </a>
+      <a href="https://app.packed.ink" class="inline-flex h-9 items-center rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">Get started</a>
+    </div>
+  </nav>
+
+  <main class="mx-auto flex max-w-6xl flex-1 flex-col items-center justify-center px-6 py-24 text-center">
+    <p class="text-sm font-medium text-muted-foreground">404</p>
+    <h1 class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">We cannot find that page</h1>
+    <p class="mt-3 max-w-md text-muted-foreground">
+      The link may be outdated, or the page may have moved. The homepage has the latest features and pricing.
+    </p>
+    <a href="/" class="mt-8 inline-flex h-11 items-center rounded-md bg-primary px-6 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90">
+      Back to the homepage
+    </a>
+  </main>
+
+  <footer class="border-t bg-muted/30 py-10">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
+      <span>&copy; {new Date().getFullYear()} Packed by PrintPro Strategies, LLC. All rights reserved.</span>
+      <a href="mailto:hello@packed.ink" class="transition-colors hover:text-foreground">hello@packed.ink</a>
+    </div>
+  </footer>
+
+</Layout>
