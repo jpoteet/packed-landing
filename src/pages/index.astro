@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import BrowserFrame from "../components/BrowserFrame.astro";
 import "../styles/global.css";
 ---
 
@@ -51,74 +52,15 @@ import "../styles/global.css";
         </div>
       </div>
 
-      <!-- Right — app preview mockup -->
-      <div class="relative mt-12 md:mt-0">
-        <div class="flex overflow-hidden rounded-lg border shadow-xl">
-          <!-- Sidebar mock -->
-          <div class="hidden w-48 flex-shrink-0 bg-sidebar p-4 text-sidebar-foreground sm:block">
-            <div class="mb-6 flex items-center gap-2">
-              <span class="inline-flex items-center justify-center rounded-md bg-sidebar-primary p-1.5">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
-              </span>
-              <span class="text-sm font-bold tracking-tight">Packed</span>
-            </div>
-            <div class="space-y-1">
-              <div class="flex items-center gap-2 rounded-md bg-sidebar-accent px-2.5 py-1.5 text-xs font-medium">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
-                Dashboard
-              </div>
-              <div class="flex items-center gap-2 px-2.5 py-1.5 text-xs text-sidebar-foreground/60">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
-                Orders
-              </div>
-              <div class="flex items-center gap-2 px-2.5 py-1.5 text-xs text-sidebar-foreground/60">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
-                Settings
-              </div>
-            </div>
-          </div>
-          <!-- Content mock -->
-          <div class="flex-1 bg-card p-5">
-            <h3 class="mb-4 text-sm font-bold tracking-tight text-card-foreground">Dashboard</h3>
-            <div class="mb-4 grid grid-cols-3 gap-2">
-              <div class="rounded-md border p-3">
-                <p class="text-xs text-muted-foreground">Total orders</p>
-                <p class="text-lg font-bold tracking-tight">128</p>
-              </div>
-              <div class="rounded-md border p-3">
-                <p class="text-xs text-muted-foreground">Packing</p>
-                <p class="text-lg font-bold tracking-tight">5</p>
-              </div>
-              <div class="rounded-md border p-3">
-                <p class="text-xs text-muted-foreground">Shipped</p>
-                <p class="text-lg font-bold tracking-tight">112</p>
-              </div>
-            </div>
-            <div class="space-y-2">
-              <div class="flex items-center justify-between rounded-md border px-3 py-2">
-                <div>
-                  <p class="text-xs font-medium">Order #1042</p>
-                  <p class="text-xs text-muted-foreground">Sarah M. — USPS Priority</p>
-                </div>
-                <span class="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-600">Shipped</span>
-              </div>
-              <div class="flex items-center justify-between rounded-md border px-3 py-2">
-                <div>
-                  <p class="text-xs font-medium">Order #1041</p>
-                  <p class="text-xs text-muted-foreground">James K. — Local pickup</p>
-                </div>
-                <span class="rounded-md bg-amber-500/10 px-2 py-0.5 text-xs font-medium text-amber-600">Packing</span>
-              </div>
-              <div class="flex items-center justify-between rounded-md border px-3 py-2">
-                <div>
-                  <p class="text-xs font-medium">Order #1040</p>
-                  <p class="text-xs text-muted-foreground">Devon R. — UPS Ground</p>
-                </div>
-                <span class="rounded-md bg-emerald-500/10 px-2 py-0.5 text-xs font-medium text-emerald-600">Shipped</span>
-              </div>
-            </div>
-          </div>
-        </div>
+      <!-- Right — live product screenshot -->
+      <div class="relative mt-12 md:mt-0 md:translate-x-2 lg:translate-x-4">
+        <BrowserFrame
+          src="/screenshots/orders-list.webp"
+          alt="Packed orders queue for Summit Ink Co. with five sample orders, customers, shipping method, and status from pending to packed"
+          url="app.packed.ink/orders"
+          priority
+          class="hero-shot"
+        />
       </div>
     </div>
   </section>
@@ -285,6 +227,25 @@ import "../styles/global.css";
           <p class="mt-1 text-sm text-muted-foreground">
             Send a branded tracking email or pickup notification. Follow every package with live carrier updates and an event timeline.
           </p>
+        </div>
+      </div>
+
+      <div class="mt-14 grid gap-8 lg:grid-cols-2">
+        <div>
+          <p class="mb-3 text-sm font-medium text-muted-foreground">Packing workspace</p>
+          <BrowserFrame
+            src="/screenshots/order-detail.webp"
+            alt="Packed order SIC-1001 detail showing Trail Crew Tee and Logo Hoodie packed into Box 1 with dimensions and total weight"
+            url="app.packed.ink/orders/SIC-1001"
+          />
+        </div>
+        <div>
+          <p class="mb-3 text-sm font-medium text-muted-foreground">Shipping labels</p>
+          <BrowserFrame
+            src="/screenshots/shipping-labels.webp"
+            alt="Packed shipping labels panel for SIC-1001 with Summit Ink Co. ship-from address and Get Shipping Rates action"
+            url="app.packed.ink/orders/SIC-1001"
+          />
         </div>
       </div>
     </div>

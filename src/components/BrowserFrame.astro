@@ -1,0 +1,44 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+  url?: string;
+  priority?: boolean;
+  class?: string;
+}
+
+const {
+  src,
+  alt,
+  url = "app.packed.ink",
+  priority = false,
+  class: className = "",
+} = Astro.props;
+---
+
+<figure class={`browser-frame overflow-hidden rounded-lg border bg-card shadow-xl ${className}`}>
+  <div class="flex items-center gap-2 border-b bg-muted/80 px-3 py-2.5">
+    <div class="flex items-center gap-1.5" aria-hidden="true">
+      <span class="h-2.5 w-2.5 rounded-full bg-red-400/80"></span>
+      <span class="h-2.5 w-2.5 rounded-full bg-amber-400/80"></span>
+      <span class="h-2.5 w-2.5 rounded-full bg-emerald-400/80"></span>
+    </div>
+    <div class="ml-2 min-w-0 flex-1">
+      <div class="truncate rounded-md border bg-background px-2.5 py-1 text-center text-[11px] text-muted-foreground sm:text-xs">
+        {url}
+      </div>
+    </div>
+  </div>
+  <div class="bg-card">
+    <img
+      src={src}
+      alt={alt}
+      width="1600"
+      height="900"
+      class="block h-auto w-full"
+      loading={priority ? "eager" : "lazy"}
+      decoding="async"
+      {...(priority ? { fetchpriority: "high" } : {})}
+    />
+  </div>
+</figure>

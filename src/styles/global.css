@@ -45,3 +45,18 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
+
+@layer components {
+  .browser-frame {
+    box-shadow:
+      0 1px 2px hsl(240 10% 10% / 0.04),
+      0 12px 32px hsl(240 10% 10% / 0.08);
+  }
+
+  @media (min-width: 768px) {
+    .hero-shot {
+      transform: scale(1.04);
+      transform-origin: center left;
+    }
+  }
+}
