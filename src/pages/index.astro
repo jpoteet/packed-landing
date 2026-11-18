@@ -405,6 +405,26 @@ import "../styles/global.css";
     </div>
   </section>
 
+  <!-- ═══════════════ FEEDBACK ═══════════════ -->
+  <section class="border-t py-16 md:py-20">
+    <div class="mx-auto max-w-6xl px-6">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="text-2xl font-bold tracking-tight md:text-3xl">Got something you wish Packed did?</h2>
+        <p class="mt-3 text-muted-foreground">
+          Tell us what would help your shop, and vote on what other owners are asking for. We build from that board.
+        </p>
+        <a
+          href="https://packed.userjot.com/feedback"
+          target="_blank"
+          rel="noopener"
+          class="mt-6 inline-flex h-10 items-center rounded-md border px-5 text-sm font-medium transition-colors hover:bg-muted"
+        >
+          Request a feature
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- ═══════════════ CTA ═══════════════ -->
   <section class="border-t bg-muted/50 py-20 md:py-28">
     <div class="mx-auto max-w-6xl px-6 text-center">
@@ -421,18 +441,44 @@ import "../styles/global.css";
   </section>
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
-  <footer class="border-t bg-muted/30 py-10">
-    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
-      <div class="flex items-center gap-2">
-        <span class="inline-flex items-center justify-center rounded-md bg-primary p-1 text-primary-foreground">
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
-        </span>
-        <span>&copy; {new Date().getFullYear()} Packed by PrintPro Strategies, LLC. All rights reserved.</span>
+  <footer class="border-t bg-muted/30 py-12">
+    <div class="mx-auto grid max-w-6xl gap-10 px-6 text-sm text-muted-foreground sm:grid-cols-2 md:grid-cols-4">
+      <div class="sm:col-span-2 md:col-span-2">
+        <div class="flex items-center gap-2 text-foreground">
+          <span class="inline-flex items-center justify-center rounded-md bg-primary p-1 text-primary-foreground">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+          </span>
+          <span class="font-medium tracking-tight">Packed</span>
+        </div>
+        <p class="mt-3 max-w-xs">&copy; {new Date().getFullYear()} Packed by PrintPro Strategies, LLC. All rights reserved.</p>
       </div>
-      <div class="flex gap-6">
-        <a href="mailto:hello@packed.ink" class="transition-colors hover:text-foreground">hello@packed.ink</a>
-        <a href="https://app.packed.ink" class="transition-colors hover:text-foreground">Log in</a>
-        <a href="https://app.packed.ink" class="transition-colors hover:text-foreground">Sign up</a>
+      <div>
+        <p class="mb-3 font-medium text-foreground">Product</p>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://packed.userjot.com/feedback" target="_blank" rel="noopener" class="transition-colors hover:text-foreground">Request a feature</a>
+          </li>
+          <li>
+            <a href="https://packed.userjot.com/updates" target="_blank" rel="noopener" class="transition-colors hover:text-foreground">Changelog</a>
+          </li>
+          <li>
+            <a href="https://packed.userjot.com/roadmap" target="_blank" rel="noopener" class="transition-colors hover:text-foreground">Roadmap</a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p class="mb-3 font-medium text-foreground">Contact</p>
+        <ul class="space-y-2">
+          <li>
+            <a href="mailto:hello@packed.ink" class="transition-colors hover:text-foreground">hello@packed.ink</a>
+          </li>
+          <li>
+            <a href="https://app.packed.ink" class="transition-colors hover:text-foreground">Log in</a>
+          </li>
+          <li>
+            <a href="https://app.packed.ink" class="transition-colors hover:text-foreground">Sign up</a>
+          </li>
+        </ul>
       </div>
     </div>
   </footer>
